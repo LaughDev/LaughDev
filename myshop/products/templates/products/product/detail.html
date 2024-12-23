@@ -1,0 +1,14 @@
+<!-- products/templates/products/product/detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+    <p>{{ product.description }}</p>
+    <p>{{ product.price }}</p>
+</body>
+</html>

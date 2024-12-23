@@ -1,0 +1,22 @@
+<!-- products/templates/products/product/list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Product List</h1>
+    <div>
+        {% for product in products %}
+            <div class="card">
+                <a href="{% url 'product_detail' product.id product.slug %}">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <h2>{{ product.name }}</h2>
+                    <p>{{ product.price }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
